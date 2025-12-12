@@ -6,6 +6,10 @@ Handles image transformations and creates train/val/test splits.
 import torch
 from torch.utils.data import DataLoader, random_split
 from torchvision import datasets, transforms
+from PIL import Image, ImageFile
+
+# Allow loading truncated images
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 
 def get_transforms(augment=True):

@@ -10,7 +10,7 @@ ENV/
 .venv
 
 data/
-
+.claude
 # Jupyter
 .ipynb_checkpoints
 *.ipynb_checkpoints
