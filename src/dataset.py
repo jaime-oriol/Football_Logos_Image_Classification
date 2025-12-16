@@ -30,8 +30,8 @@ def get_transforms(augment=True):
     if augment:
         # Training transformations with moderate augmentation
         return transforms.Compose([
-            # Resize all images to 96x96 (reduced for faster training)
-            transforms.Resize((96, 96)),
+            # Resize all images to 64x64 (reduced for faster training)
+            transforms.Resize((64, 64)),
 
             # Random horizontal flip
             transforms.RandomHorizontalFlip(p=0.5),
@@ -65,7 +65,7 @@ def get_transforms(augment=True):
         # Validation/test transformations without augmentation
         return transforms.Compose([
             # Same resize for consistency
-            transforms.Resize((96, 96)),
+            transforms.Resize((64, 64)),
 
             # Convert to tensor
             transforms.ToTensor(),
